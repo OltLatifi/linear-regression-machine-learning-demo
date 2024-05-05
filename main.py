@@ -30,13 +30,3 @@ for _ in range(30):
     if accuracy > best_accuracy:
         best_accuracy = accuracy
         model.save_model()
-
-
-pickle_in = open("studentmodel.pickle", "rb")
-linear = pickle.load(pickle_in)
-
-x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(
-    X, Y, test_size=0.2)
-
-accuracy = linear.score(x_test, y_test)
-print("Accuracy: ", accuracy)

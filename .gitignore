@@ -1,1 +1,3 @@
 venv/
+studentmodel.pickle
+__pycache__
